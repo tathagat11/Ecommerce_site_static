@@ -85,7 +85,7 @@ nav {
     background: url("/src/sliderBG.jpg");
     background-size: 100%;
     overflow: hidden;
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 91%);
 }
 
 .sliderWrapper{
@@ -188,4 +188,35 @@ nav {
     bottom: 20%;
     background-color: #fff;
     
+}
+
+.features {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.featureTitle {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 20px;
+}
+
+.featureImg {
+    height: 50px;
+    width: 50px;
+}
+
+.featureDesc {
+    color: gray;
+    width: 50%;
+    height: 100px;
 }
