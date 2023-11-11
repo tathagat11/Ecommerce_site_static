@@ -41,6 +41,7 @@ nav {
 }
 
 .discountSeason {
+    margin-right: 150px;
     font-size: 30px;
     border-bottom: 2px solid red;
     cursor: pointer;
@@ -66,6 +67,10 @@ nav {
 
 .cart-icon {
     height: 35px;
+}
+
+.home-icon {
+    height: 20px;
 }
 
 .navBottom {
@@ -325,3 +330,34 @@ nav {
     padding-top: 100px;
 }
 
+footer {
+    display: flex;
+}
+
+.footerLeft{
+    flex:2;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.fMenuTitle {
+    font-size: 16px;
+}
+
+.fList {
+    padding: 0;
+    list-style: none;
+}
+
+.fListItem {
+    margin-bottom: 10px;
+    color: gray;
+    cursor: pointer;
+}
+
+.footerRight {
+    flex:1;
+    padding: 50px;
+    
+}

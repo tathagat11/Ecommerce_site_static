@@ -8,6 +8,7 @@
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://kit.fontawesome.com/d10982b38e.js" crossorigin="anonymous"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function() {
         const wrapper = document.querySelector(".sliderWrapper");
@@ -34,8 +35,9 @@
         <span class="discountSeason">Diwali Sale!</span>
       </div>
       <div class="nav-divs">
-        <a href="#" class="navButtons">Home</a>
-        <a href="/pages/aboutus.html" class="navButtons">About Us</a>
+        <a href="#" class="navButtons">
+          <img src="/src/home.png" alt="" class="home-icon">
+        </a>
         <a href="/pages/cartpage.html" class="navButtons">
           <img src="/src/cart.png" alt="" class="cart-icon">
         </a>
@@ -103,5 +105,60 @@
           <span class="featureDesc">Every product you buy from us is 100% genuine.</span>
         </div>
       </div>
+      <footer>
+        <div class="footerLeft">
+          <div class="footerMenu">
+            <h1 class="fMenuTitle">About Us</h1>
+            <ul class="fList">
+              <li class="fListItem">Company</li>
+              <li class="fListItem">Contact</li>
+              <li class="fListItem">Careers</li>
+              <li class="fListItem">Affiliates</li>
+              <li class="fListItem">Stores</li>
+            </ul>
+          </div>
+          <div class="footerMenu">
+            <h1 class="fMenuTitle">Useful Links</h1>
+            <ul class="fList">
+              <li class="fListItem">Support</li>
+              <li class="fListItem">Refund</li>
+              <li class="fListItem">FAQ</li>
+              <li class="fListItem">Feedback</li>
+              <li class="fListItem">Stories</li>
+            </ul>
+          </div>
+          <div class="footerMenu">
+            <h1 class="fMenuTitle">Products</h1>
+            <ul class="fList">
+              <li class="fListItem">Air Max</li>
+              <li class="fListItem">Jordan</li>
+              <li class="fListItem">Originals</li>
+              <li class="fListItem">DC</li>
+              <li class="fListItem">Mercurial</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footerRight">
+          <div class="footerRightMenu">
+            <h1 class="fMenuTitle"></h1>
+            <div class="fMail">
+              <input type="text" placeholder="johndoe@email.com" class="fInput">
+              <button class="fButton">Join!</button>
+            </div>
+          </div>
+          <div class="footerRightMenu">
+            <h1 class="fMenuTitle">Follow Us</h1>
+            <div class="fIcons">
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-instagram"></i>
+              <i class="fa-brands fa-youtube"></i>
+              <i class="fa-brands fa-whatsapp"></i>
+            </div>
+          </div>
+          <div class="footerRightMenu">
+            <span class="copyright">@Tathagata Talukdar. All rights reserved. 2023.</span>
+          </div>
+        </div>
+      </footer>
 </body>
 </html>
