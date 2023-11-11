@@ -1,0 +1,164 @@
+<div class="columns sixteen" id="content">
+    <div class="account text-center">
+      <h1 class="account_header">  My Account
+    </h1>
+      <div data-hook="account_summary" id="account-summary">
+        <table id="info">
+          <tbody><tr>
+            <td class="labeltd">
+              <label for="name">          Name
+    </label>
+            </td>
+            <td class="profile-value">
+              <label class="labeltd-phone" for="name">          Name
+    </label>
+              -
+            </td>
+          </tr>
+          <tr>
+            <td class="labeltd">
+              <label for="email">          Email Address
+    </label>
+            </td>
+            <td class="profile-value">
+              <label class="labeltd-phone" for="email">          Email Address
+    </label>
+              tathagata.talukdar@gmail.com
+            </td>
+          </tr>
+          <tr>
+            <td class="labeltd">
+              <label for="mobile">          Mobile Number
+    </label>
+            </td>
+            <td class="profile-value">
+              <label class="labeltd-phone" for="mobile">          Mobile Number
+    </label>
+              -
+            </td>
+          </tr>
+          <tr>
+            <td class="labeltd">
+              <label for="password">          Password
+    </label>
+            </td>
+            <td class="profile-value password">
+              <label class="labeltd-phone" for="password">          Password
+    </label>
+              **********
+            </td>
+          </tr>
+        </tbody></table>
+        <a class="button primary" id="edit" href="javascript:void(0);">Edit</a>
+      </div>
+      <form name="account-edit_form" class="form-validate" id="account-edit_form" action="/users/2400327" accept-charset="UTF-8" method="post" novalidate="novalidate"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="_method" value="put"><input type="hidden" name="authenticity_token" value="JjpGJLA62tn1qfQb7cluW/ACInv0IZZTq/9svLxlJ9UIvYgG5j2CIZLoP9hHOR2EO66qJBaqqUfNzCRsCS0s1Q==">
+      <table id="edit-info">
+        <tbody><tr>
+          <td class="labeltd">
+            <label for="user_name">Name</label>
+          </td>
+          <td>
+            <label class="labeltd-phone" for="name">        Name
+    </label>
+            <input class="textfield required" tabindex="1" placeholder="Name" type="text" name="user[name]" id="user_name">
+          </td>
+        </tr>
+        <tr>
+          <td class="labeltd">
+            <label for="user_email">Email Address</label>
+          </td>
+          <td class="profile-value">
+            <label class="labeltd-phone" for="email">        Email Address
+    </label>
+            tathagata.talukdar@gmail.com
+          </td>
+        </tr>
+        <tr>
+          <td class="labeltd">
+            <label for="user_mobile">Mobile Number</label>
+          </td>
+          <td>
+            <label class="labeltd-phone" for="mobile">        Mobile Number
+    </label>
+            <input class="textfield number" tabindex="3" minlength="10" maxlength="10" placeholder="Mobile Number" size="10" type="text" name="user[mobile]" id="user_mobile">
+          </td>
+        </tr>
+        <tr class="change_password_container">
+          <td class="labeltd">
+            <label for="user_password">Password</label>
+          </td>
+          <td>
+            <label class="labeltd-phone" for="password">        Password
+    </label>
+            <a id="change_password" class="link-color" href="javascript:void(0);">Change Password</a>
+          </td>
+        </tr>
+        <tr class="password_container">
+          <td class="labeltd">
+            <label for="user_password">Password</label>
+          </td>
+          <td>
+            <label class="labeltd-phone" for="password">        Password
+    </label>
+            <input class="textfield required" tabindex="4" placeholder="Password" disabled="disabled" type="password" name="user[password]" id="user_password">
+          </td>
+        </tr>
+        <tr class="password_container">
+          <td class="labeltd">
+            <label for="user_password">Confirm Password</label>
+          </td>
+          <td>
+            <label class="labeltd-phone" for="password_confirmation">        Confirm Password
+    </label>
+            <input class="textfield required" equalto="#account-edit_form #user_password" tabindex="4" placeholder="Confirm Password" disabled="disabled" type="password" name="user[password_confirmation]" id="user_password_confirmation">
+          </td>
+        </tr>
+      </tbody></table>
+      <div class="text-center">
+        <input type="submit" name="commit" value="Update" class="button primary">
+        <a class="edit button primary" id="cancel" href="javascript:void(0);">Cancel</a>
+      </div>
+    </form>  <script>
+        $(document).ready(function() {
+        
+          const passwordRegex = /^(?=(?:\S*\d))(?=(?:\S*[a-z]))(?=\S*[^A-Za-z0-9])(?!.*[\s])\S{8,}$/
+        
+            jQuery.validator.addMethod("regex", function(value) {
+            if (passwordRegex.test(value)) 
+              return true;  
+            else 
+              return false;
+            }, 'Password must contain at least 8 characters including at least one lowercase letter, one number and one special character with no spaces.');
+        
+          $("#change_password").click(function() {
+            $(".password_container").show();
+            $('.password_container input').removeAttr("disabled");
+            $('.change_password_container').hide();
+          });
+        
+          $("#edit").click(function() {
+            $("#account-summary").hide();
+            $("#account-edit_form").show();
+          });
+        
+          $("#cancel").click(function() {
+            $("#account-summary").show();
+            $("#account-edit_form").hide();
+            $(".change_password_container").show();
+            $(".password_container").hide();
+            $('.password_container input').attr("disabled", "disabled");
+          });
+        
+          $("#account-edit_form").validate({
+            rules: {
+              'user[password]': {
+                regex: true
+              }
+            }
+          });
+          
+        });
+      </script>
+    </div>
+    
+    </div>

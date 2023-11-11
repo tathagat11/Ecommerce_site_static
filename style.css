@@ -25,9 +25,9 @@ nav {
 }
 
 .brandName {
-    font-weight: 700;
+    font-weight: 300;
     font-variant: small-caps;
-    font-size: 36px;
+    font-size: 40px;
     margin-top: 10px;
 }
 
@@ -391,5 +391,55 @@ footer {
     cursor: pointer;
 }
 
-/* cart page */
+/* profile page */
 
+.profileContainer {
+    height: 73vh;
+    position: relative;
+    background: url("/src/productBG.jpg");
+    background-size: 100%;
+    overflow: hidden;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 91%);
+}
+
+.profileTitle {
+    padding-left: 100px;
+    padding-top: 40px;
+}
+
+.infoContainer{
+    padding: 30px;
+    align-self: center;
+    width: 20vw;
+    border: 4px;
+    box-shadow: 20px #111;
+    border-radius: 10px;
+    background-color: #dddddd;
+}
+
+
+
+.infoWrapper {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.infoList {
+    padding: 0;
+    list-style: none;
+    font-size: 18px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.infoItems {
+    text-align: center;
+    padding-top: 10px;
+    font-weight: 400;
+    color: #585858;
+}
